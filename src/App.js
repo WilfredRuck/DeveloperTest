@@ -6,8 +6,8 @@ import {Link} from "react-router-dom";
 
 class App extends React.Component {
 
-
   render() {
+    console.log(Object.values(Data)[0]);
     const subscriptions = Object.values(Data).map((sub, idx) => {
       return <li key={idx}>         
         <div className="subscription">
@@ -22,13 +22,13 @@ class App extends React.Component {
             <li> {sub.credits["nurse"]} CME credits for Nurses </li>
           </ul>
           </div>
-        <Link to="/select" subscription={sub}><button> Select </button></Link>
+        <Link to={`/select/${idx}`}><button> Select </button></Link>
       </li>
     });
     return (
       <div className="App">
         <div className="navbar">
-          <img src={logo} height="30px" width="50px"></img>
+          <img src={logo} height="30px" width="50px" alt="logo"></img>
         </div>
 
         <div className="main-content">

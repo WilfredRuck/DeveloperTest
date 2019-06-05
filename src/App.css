@@ -17,6 +17,12 @@
   border-bottom-right-radius: 0px;
 }
 
+.selected-subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cme {
   list-style: none;
   padding: 0;
