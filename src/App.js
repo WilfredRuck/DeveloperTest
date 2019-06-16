@@ -7,7 +7,6 @@ import {Link} from "react-router-dom";
 class App extends React.Component {
 
   render() {
-    console.log(Object.values(Data)[0]);
     const subscriptions = Object.values(Data).map((sub, idx) => {
       return <li key={idx}>         
         <div className="subscription">
@@ -21,7 +20,7 @@ class App extends React.Component {
             <li> {sub.credits["pa"]} CME credits for PA </li>
             <li> {sub.credits["nurse"]} CME credits for Nurses </li>
           </ul>
-          </div>
+        </div>
         <Link to={`/select/${idx}`}><button> Select </button></Link>
       </li>
     });

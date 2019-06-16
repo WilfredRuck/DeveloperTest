@@ -1,7 +1,6 @@
 import React from 'react';
 import Data from './Data/data';
 
-
 class Select extends React.Component {
   render() {
     const sub = this.props.match.params.subId;
